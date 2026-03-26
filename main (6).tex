@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{minted}
+
+\geometry{margin=2.5cm}
+
+% TÍTULO CORRECTO
+\begin{titlepage}
+    \centering
+    
+\title{Laboratorio 1 \\ Fundamentos de Informática \\ Universidad Nacional}
+\author{David Antonio Zúñiga Larcón}
+\date{26 de marzo}
+
+\maketitle
+
+\end{titlepage}  
+
+\begin{document}
+% CONTENIDO
+
+\section{Intro}
+
+
+\section{Código en C++}
+
+Ejemplo de uso con \verb|cout|:
+
+\begin{minted}{cpp}
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Hola mundo" << endl;
+    return 0;
+}
+\end{minted}
+
+\section{}
+
+
+\section{}
+
+
+
+\end{document}
+
+ \begin{figure}[h!] 
+ para imagenes: \centering \includegraphics [scale=0.6]{Imganen1.png} % Nombre de la imagen para la segunda ley. \caption{Representación gráfica de la segunda ley de Kepler, (Serway y Jewett, 2008, p. 368).} \label{fig:kepler2} \end{figure verb 
+ 
+ \verb|cout << "Hola";| \verb!cout << "Hola";! 
+ 
+ \setminted{
+linenos,
+frame=single,
+framesep=0mm,
+rulecolor=\color{blue},
+bgcolor=gray!10,
+fontsize=\small
+... el resto de opciones que se desean cargar
+4. Ejemplo con opciones de formato
+La librería minted permite personalizar la apariencia del bloque de código; entre las
+opciones mas frecuentes están:
+Opciones visuales básicas del bloque
+• fontsize=\small: cambia el tamaño de letra.
+• linenos: muestra números de línea.
+• frame=single: pone un recuadro.
+• framesep=...: controla el espacio entre el borde y el código.
+• baselinestretch=...: cambia el espaciado vertical entre líneas.
+• bgcolor=...: pone color de fondo.
+• tabsize=2: fija el tamaño visual de las tabulaciones.
+• breaklines: parte líneas largas automáticamente.
+• breakanywhere: permite cortes en más posiciones.
+• breaksymbolleft, breaksymbolright: cambian el símbolo que aparece cuando
+una línea se parte.
+
+Opciones de las líneas de numeración
+• linenos: activa numeración.
+• firstnumber=1: fija el número inicial.
+• stepnumber=2: numera cada 2 líneas.
+• numbersep=5pt: separa los números del código.
+• numberblanklines=true/false: decide si líneas en blanco se numeran.
+• resetmargins: ajusta márgenes cuando hay numeración.
+Opciones de márgenes, sangría y caja
+• xleftmargin=...
+• xrightmargin=...
+• gobble=2: elimina una cantidad fija de espacios al inicio de cada línea.
+• autogobble: detecta y elimina sangría común automáticamente.
+• samepage: intenta no partir el bloque entre páginas.
+• frameleftline, framerightline, frametopline,framebottomline: controlan
+lados específicos del marco.
+Opciones del resaltado de sintaxis
+• style=default, style=monokai, etc.: cambia el estilo de colores.
+• {cpp}, {python}, {java}, etc.: el lenguaje se indica en el entorno.
+• encoding=utf8: define codificación cuando aplica.
+• texcomments: interpreta comentarios para permitir comandos TeX en ciertos
+casos.
+• mathescape: permite escribir matemáticas dentro del código usando ....
+• escapeinside=|| o similar: permite “salir” del código y escribir LaTeX dentro
+del bloque.
+• highlightlines={2,4-6}:
+Opciones para inclusión de archivos
+Al usar \inputminted se puede agregar opciones para leer solo partes de un archivo.
+• firstline=...
+• lastline=...
+• firstnumber=...
+• stripall
+• stripnl
+• gobble=...
+Estas opciones son muy útiles cuando el código está en archivos externos.
+Para definir un entorno minted con opciones se usa la siguiente estructura
+\begin{minted}[linenos, frame=single, bgcolor=gray!10, resto de Opciones]{cpp}
+// codigo c++
+\end{minted}
